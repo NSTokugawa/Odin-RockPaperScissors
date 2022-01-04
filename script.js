@@ -49,12 +49,12 @@ if (result === `You choose ${playerSelection}, I choose ${computerPlay}, You Win
   playerPoints ++;
 } else if (result === `You choose ${playerSelection}, I choose ${computerPlay}, I Win!`) {
   computerPoints ++;
-}
 };
 
 // Logs round outcome
-console.log(result); {
+console.log(result);
 };
+
 
 // Logs game outcome
 if (playerPoints > computerPoints) {
