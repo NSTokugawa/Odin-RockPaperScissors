@@ -7,8 +7,10 @@ for (i = 1; i <= 5; i++) {
 
 // Prompts user for input
 let playerSelection = prompt("Choose your weapon: Rock, Paper, or Scissors?");
+// Stores random integer
+let computerChoice = getRandomInt(3);
 // Calls function computerRandom to fetch computer's input for function battle
-let computerPlay = computerRandom(getRandomInt(3));
+let computerPlay = computerRandom(computerChoice);
 // Stores result
 let result = battle(playerSelection, computerPlay);
 
@@ -19,11 +21,11 @@ function getRandomInt(max) {
 
 // Converts random number into playable variable
 function computerRandom() {
-  if (getRandomInt(3) === 0) {
+  if (computerChoice === 0) {
   return "rock";
-} else if (getRandomInt(3) === 1) {
+} else if (computerChoice === 1) {
   return "paper";
-} else if (getRandomInt(3) === 2) {
+} else if (computerChoice === 2) {
   return "scissors";
 }
 };
@@ -34,18 +36,18 @@ function battle() {
   if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
     alert("Please choose 'Rock', 'Paper', or 'Scissors'");
   } else if (playerSelection === "rock" && computerPlay === "scissors" || playerSelection === "scissors" && computerPlay === "paper" || playerSelection === "paper" && computerPlay === "rock") {
-    return "Player Wins!";
+    return `You choose ${playerSelection}, I choose ${computerPlay}, You Win!`;
   } else if (playerSelection === computerPlay) {
-    return "Game is a Draw!";
+    return `You choose ${playerSelection}, I choose ${computerPlay}, Game is a Draw!`;
   } else {
-    return "Computer Wins!";
+    return `You choose ${playerSelection}, I choose ${computerPlay}, I Win!`;
   }
 };
 
 // Keeps score
-if (result === "Player Wins!") {
+if (result === `You choose ${playerSelection}, I choose ${computerPlay}, You Win!`) {
   playerPoints ++;
-} else if (result === "Computer Wins!") {
+} else if (result === `You choose ${playerSelection}, I choose ${computerPlay}, I Win!`) {
   computerPoints ++;
 };
 
@@ -55,9 +57,9 @@ console.log(result);
 
 // Logs game outcome
 if (playerPoints > computerPoints) {
-  console.log("Player Wins Game!");
+  console.log(`Player Wins Game, ${playerPoints} to ${computerPoints}!`);
 } else if (playerPoints < computerPoints) {
-  console.log("Computer Wins Game!");
+  console.log(`Computer Wins Game, ${computerPoints} to ${playerPoints}!`);
 } else {
-  console.log("Game is a Draw!");
+  console.log(`Game is a Draw, ${playerPoints} to ${computerPoints}!`);
 };
