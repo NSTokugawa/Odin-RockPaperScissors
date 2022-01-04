@@ -57,9 +57,9 @@ console.log(result);
 
 // Logs game outcome
 if (playerPoints > computerPoints) {
-  console.log(`You win the game, ${playerPoints} to ${computerPoints}!`);
+  alert(`You win the game, ${playerPoints} to ${computerPoints}!`);
 } else if (playerPoints < computerPoints) {
-  console.log(`I win the game, ${computerPoints} to ${playerPoints}!`);
+  alert(`I win the game, ${computerPoints} to ${playerPoints}!`);
 } else {
-  console.log(`The game is a Draw, ${playerPoints} to ${computerPoints}!`);
+  alert(`The game is a Draw, ${playerPoints} to ${computerPoints}!`);
 };
