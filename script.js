@@ -1,3 +1,7 @@
+// Stores points for each round
+let computerPoints = 0;
+let playerPoints = 0;
+
 // Plays five rounds
 for (i = 1; i <= 5; i++) {
 
@@ -5,6 +9,8 @@ for (i = 1; i <= 5; i++) {
 let playerSelection = prompt("Choose your weapon: Rock, Paper, or Scissors?");
 // Calls function computerRandom to fetch computer's input for function battle
 let computerPlay = computerRandom(getRandomInt(3));
+// Stores result
+let result = battle(playerSelection, computerPlay);
 
 // Generates a random number 0, 1, 2
 function getRandomInt(max) {
@@ -36,6 +42,22 @@ function battle() {
   }
 };
 
+// Keeps score
+if (result === "Player Wins!") {
+  playerPoints ++;
+} else if (result === "Computer Wins!") {
+  computerPoints ++;
+};
+
 // Logs round outcome
-console.log(battle(playerSelection,computerPlay + i));
+console.log(result);
+};
+
+// Logs game outcome
+if (playerPoints > computerPoints) {
+  console.log("Player Wins Game!");
+} else if (playerPoints < computerPoints) {
+  console.log("Computer Wins Game!");
+} else {
+  console.log("Game is a Draw!");
 };
