@@ -3,20 +3,20 @@ let computerPoints = 0;
 let playerPoints = 0;
 
 // Plays five rounds
-for (i = 1; i <= 5; i++) {
+for (i = 0; i < 5; i++) {
 
 // Prompts user for input
 let playerSelection = prompt("Choose your weapon: Rock, Paper, or Scissors?");
 // Stores random integer
-let computerChoice = getRandomInt(3);
+let computerChoice = getRandomInt();
 // Calls function <computerRandom> to fetch computer's input for function <battle>
 let computerPlay = computerRandom(computerChoice);
 // Stores result of round
 let result = battle(playerSelection, computerPlay);
 
 // Generates a random number 0, 1, 2
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+function getRandomInt() {
+  return Math.floor(Math.random() * 3);
 };
 
 // Converts random number into playable variable
