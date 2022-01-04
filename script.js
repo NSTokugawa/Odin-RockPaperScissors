@@ -25,8 +25,10 @@ function computerRandom() {
 
 // Checks player input against computer input to determine game outcome
 function battle() {
-  playerSelection = playerSelection.toLowerCase();
-  if (playerSelection === "rock" && computerPlay === "scissors" || playerSelection === "scissors" && computerPlay === "paper" || playerSelection === "paper" && computerPlay === "rock") {
+  //playerSelection = playerSelection.toLowerCase();
+  if (playerSelection !== "rock" && playerSelection !== "paper" && playerSeceltion !== "scissors") {
+    alert("Please choose");
+  } else if (playerSelection === "rock" && computerPlay === "scissors" || playerSelection === "scissors" && computerPlay === "paper" || playerSelection === "paper" && computerPlay === "rock") {
     return "Player Wins!";
   } else if (playerSelection === computerPlay) {
     return "Game is a Draw!";
