@@ -1,7 +1,8 @@
+// Plays five rounds
+for (i = 1; i <= 5; i++) {
+
 // Prompts user for input
 let playerSelection = prompt("Choose your weapon: Rock, Paper, or Scissors?");
-// Calls function getRandomInt to fetch a random number for function computerRandom
-//let computerSelection = getRandomInt(3);
 // Calls function computerRandom to fetch computer's input for function battle
 let computerPlay = computerRandom(getRandomInt(3));
 
@@ -35,5 +36,6 @@ function battle() {
   }
 };
 
-// Logs game outcome
-console.log(battle(playerSelection,computerPlay));
+// Logs round outcome
+console.log(battle(playerSelection,computerPlay + i));
+};
