@@ -38,7 +38,7 @@ function battle() {
   } else if (playerSelection === "rock" && computerPlay === "scissors" || playerSelection === "scissors" && computerPlay === "paper" || playerSelection === "paper" && computerPlay === "rock") {
     return `You choose ${playerSelection}, I choose ${computerPlay}, You Win!`;
   } else if (playerSelection === computerPlay) {
-    return `You choose ${playerSelection}, I choose ${computerPlay}, Game is a Draw!`;
+    return `You choose ${playerSelection}, I choose ${computerPlay}, Draw!`;
   } else {
     return `You choose ${playerSelection}, I choose ${computerPlay}, I Win!`;
   }
@@ -52,7 +52,7 @@ if (result === `You choose ${playerSelection}, I choose ${computerPlay}, You Win
 };
 
 // Logs round outcome
-console.log(result);
+alert(result);
 };
 
 
