@@ -9,9 +9,9 @@ for (i = 1; i <= 5; i++) {
 let playerSelection = prompt("Choose your weapon: Rock, Paper, or Scissors?");
 // Stores random integer
 let computerChoice = getRandomInt(3);
-// Calls function computerRandom to fetch computer's input for function battle
+// Calls function <computerRandom> to fetch computer's input for function <battle>
 let computerPlay = computerRandom(computerChoice);
-// Stores result
+// Stores result of round
 let result = battle(playerSelection, computerPlay);
 
 // Generates a random number 0, 1, 2
@@ -30,7 +30,7 @@ function computerRandom() {
 }
 };
 
-// Checks player input against computer input to determine game outcome
+// Checks player input against computer input to determine round outcome
 function battle() {
   playerSelection = playerSelection.toLowerCase();
   if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
@@ -44,7 +44,7 @@ function battle() {
   }
 };
 
-// Keeps score
+// Keeps score between rounds
 if (result === `You choose ${playerSelection}, I choose ${computerPlay}, You Win!`) {
   playerPoints ++;
 } else if (result === `You choose ${playerSelection}, I choose ${computerPlay}, I Win!`) {
