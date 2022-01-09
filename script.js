@@ -3,7 +3,7 @@ let computerPoints = 0;
 let playerPoints = 0;
 
 // Plays five rounds
-for (i = 0; i < 5; i++) {
+for (computerPoints === 0 && playerPoints === 0; computerPoints < 5 && playerPoints < 5;) {
 
 // Prompts user for input
 let playerSelection = prompt("Choose your weapon: Rock, Paper, or Scissors?");
